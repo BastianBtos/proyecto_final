@@ -3,7 +3,7 @@ const Texto_1 = ({Titulo, Parrafo}) => {
     return(
         <>
             <div className="titulo">
-                <h1>{Titulo}</h1>
+                <h2>{Titulo}</h2>
             </div>
             <div className="parrafos">
                 <p>{Parrafo}</p>

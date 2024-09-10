@@ -3,7 +3,6 @@
     background: black;
     background: rgba(30, 30, 30, 0.6);
     backdrop-filter: blur(2px);
-
 }
 
 
@@ -19,11 +18,13 @@
     margin: 10px;
     display: flex;
     flex-direction: row;
+
 }
 
 /*aqui quito el estilo por defecto del texto*/
-.estilo_lista_vacio{
+.estilo_lista{
     list-style: none;
+
 }
 
 
@@ -39,37 +40,45 @@
 
 /*aqui coloco el hover al pasar sonbre el texto*/
 .hover:hover{
-    background: #535bf2;
+    background: darkred;
 }
 
 /*aqui coloco que el texto se coloque en el extremo izquierdo y que tenga un margen vertical*/
 .padding_lateral{
     padding: 20px;
     display: block;
-    text-align: left;
+    text-align: center;
 }
-
+.logo_barra{
+    align-self: center;
+    margin-right: 13px;
+}
 
 
 /*especificaciones en tablet*/
 
 @media(max-width: 850px){
+    .logo_barra{
+        align-self: center;
+        padding: 20px;
+        margin: 0
+    }
     .barras{
         background:black;
         display: block;
     }
     .desplegable{
         transform: translate(-100%);
-        transition: 0.5s;
         font-size: 1.5rem;
         width: 50%;
+        height: 0;
 
     }
     .nav_lateral{
         padding: 0;
         margin: 0;
-        width: 100%;
-        height: 50vh;
+        width: auto;
+        height: auto;
         display: flex;
         flex-direction: column;
     }
@@ -79,24 +88,26 @@
     }
     .boton_menu{
         background-image: url("../src/assets/image/icono_menu.png");
-        background-color: darkslategray;
+        background-color: black;
         background-repeat: no-repeat;
         height: 30px;
         width: 30px;
         background-size: 30px;
         background-position: center;
 
-    }
-    /*abrir y cerrar menu*/
-    .abrir_menu{
-        transform: translate(0%);
-        transition: 0.5s;
-        width: 50%;
-        background: rgba(30, 30, 30, 1);
-        backdrop-filter: blur(2px);
 
     }
-    .colocar_x{
+    /*abrir y cerrar menu*/
+    .abrir{
+        transform: translate(0%);
+        transition: 0.5s;
+        width: 100%;
+        background: rgba(30, 30, 30, 0.5);
+        backdrop-filter: blur(2px);
+        height: auto;
+
+    }
+    .ponerx{
         background-image: url("../src/assets/image/icono_x.png");
         background-color: black;
         background-repeat: no-repeat;
